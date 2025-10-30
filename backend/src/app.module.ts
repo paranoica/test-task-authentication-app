@@ -17,7 +17,7 @@ import { HttpExceptionFilter } from "./common/filters/http-exception.filter";
             imports: [ConfigModule],
             useFactory: (configService: ConfigService) => ({
                 type: "postgres",
-                host: configService.get("DB_HOST", "postgres"),
+                host: configService.get("DB_HOST", "db"),
                 port: configService.get("DB_PORT", 5432),
                 username: configService.get("DB_USERNAME", "postgres"),
                 password: configService.get("DB_PASSWORD", "postgres"),
